@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+
+body{
+   background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-heading{
+    font-size: 4.5rem;
+    color: rgb(105, 98, 98);
+    margin: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(85, 85, 230,0.5);
+    
+}
+.heading2{
+    font-size: 3.1rem;
+    
+    color:black;
+    font-weight: bold;
+    padding-right: 15px;
+   
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.category,.level-head{
+    font-size: 3rem;
+    padding: 10px;
+    color: rgb(243, 200, 119);
+    font-weight: bold;
+    padding-right: 15px;
+    text-shadow: 1px 1px blue;
+}
+.categories-options,.levels-options{
+   
+    height: 45px;
+    width: 300px;
+    font-size: 25px;
+    padding: 8px;
+   border-radius: 20px;
+    background-color: lightgray;
+    border: none;
+}
+.level-head{
+    margin-top: 20px;
+    text-shadow: 1px 1px green;
+}
+.level-division,.headings-division,.category-division,.limit-division{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.start,.next,.skip{
+    padding: 10px 30px;
+   border: none;
+    border-radius: 10px;
+font-size: 25px;
+margin-top: 20px;
+background-color: crimson;
+color: white;
+margin: 30px;
+}
+.limit-head{
+    margin-top: 20px;
+    text-shadow: 1px 1px red;  
+}
+.limit{
+    margin-top: 10px;
+    height: 45px;
+    width: 320px;
+    font-size: 35px;
+    padding: 8px;
+   border-radius: 20px;
+    background-color: lightgray;
+    border: none;
+} 
+
+/*  Quiz Part*/
+.quiz{
+    display: none;
+}
+.question-answer{
+    font-size: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+background-color: rgb(127, 179, 185);
+border-radius: 15px;
+padding: 10px;
+
+}
+.options-list{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2.5rem;
+
+}
+.options-list .options{
+    margin: 7px;
+    background-color: rgb(137, 108, 167);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+   opacity: 0.9;
+   padding-left: 20px;
+   padding-right: 20px;
+   color: red;
+   overflow: visible;
+}
+.options-list .options:hover{
+   
+opacity: 1;
+transform: translateX(-20px);
+overflow: hidden;
+    
+}
+.options-list .options:focus{
+    opacity: 1;
+    transform: translateX(-20px);
+    overflow: hidden; 
+}
+.actual-question{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    color: black;
+}
+.buttons{
+    display: flex;
+}
