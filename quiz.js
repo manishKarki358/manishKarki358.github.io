@@ -209,6 +209,13 @@ function ending(numberOfCorrectAnswers,numberOfIncorrectAnswers){
     endMessage.innerHTML=`<h1 class="end-heading">Congratulations!! You completed the quiz</h1>
     <h3 class="questions-head" >Total Questions Attempted: ${totalQuestions}</h3>
     <h3 class="result-head" >You got ${numberOfCorrectAnswers} right.</h3>
-    <h3 class="result-head">You got ${numberOfIncorrectAnswers} wrong.</h3> `
+    <h3 class="result-head">You got ${numberOfIncorrectAnswers} wrong.</h3> 
+    <button class="restart">Restart</button>`
     quiz.append(endMessage)
+    const restart=document.querySelector('.restart')
+    restart.addEventListener('click',()=>{
+        endMessage.remove()
+        
+        filters.style.display="flex"
+    })
 }
