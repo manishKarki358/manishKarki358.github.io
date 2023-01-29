@@ -196,7 +196,7 @@ element.classList.add('clicked')
 }
 else{
     element.classList.remove('clicked')
-   
+  
 }
     })
   
@@ -205,9 +205,10 @@ function ending(numberOfCorrectAnswers,numberOfIncorrectAnswers){
     let totalQuestions=numberOfCorrectAnswers+numberOfIncorrectAnswers
    // console.log("finally",numberOfCorrectAnswers,numberOfIncorrectAnswers);
     const endMessage=document.createElement('div')
-    endMessage.innerHTML=`<h1 class="main-heading">Congratulations!! You completed the quiz</h1>
-    <h3 class="level-head" >Total Questions Attempted: ${totalQuestions}</h3>
-    <h3 class="level-head" >You got ${numberOfCorrectAnswers} right.</h3>
-    <h3 class="level-head">You got ${numberOfIncorrectAnswers} wrong.</h3> `
+    endMessage.classList.add('ending')
+    endMessage.innerHTML=`<h1 class="end-heading">Congratulations!! You completed the quiz</h1>
+    <h3 class="questions-head" >Total Questions Attempted: ${totalQuestions}</h3>
+    <h3 class="result-head" >You got ${numberOfCorrectAnswers} right.</h3>
+    <h3 class="result-head">You got ${numberOfIncorrectAnswers} wrong.</h3> `
     quiz.append(endMessage)
 }

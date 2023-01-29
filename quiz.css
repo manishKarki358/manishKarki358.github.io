@@ -26,7 +26,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.main-heading{
+.main-heading,.end-heading{
     font-size: 4.5rem;
     color: rgb(105, 98, 98);
     margin: 20px;
@@ -62,7 +62,7 @@ body{
     background-color: lightgray;
     border: none;
 }
-.level-head{
+.level-head,.result-head,.questions-head{
     margin-top: 20px;
     text-shadow: 1px 1px green;
 }
@@ -137,15 +137,11 @@ padding: 10px;
 .options-list .options:hover{
    
 opacity: 1;
-transform: translateX(-20px);
+transform: translateX(-15px);
 overflow: hidden;
     
 }
-.options-list .options:focus{
-    opacity: 1;
-    transform: translateX(-20px);
-    overflow: hidden; 
-}
+
 .actual-question{
     text-align: center;
     font-size: 2.8rem;
@@ -155,4 +151,71 @@ overflow: hidden;
 }
 .buttons{
     display: flex;
+}
+.clicked{
+    border: 2px solid green;
+    opacity: 1;
+    box-shadow: 1px 1px 10px blue;
+}
+.ending{
+    animation-name: scaling;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes scaling{
+    0%{
+        transform: scale(0.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.questions-head{
+    font-size: 40px;
+   
+}
+.result-head{
+    font-size: 35px;
+    
+}
+.end-heading{
+    font-size: 4rem;
+    
+}
+@media (max-width:700px){
+    .questions-head{
+        font-size: 20px;
+       
+    }
+    .result-head{
+        font-size: 15px;
+        
+    }
+    .end-heading{
+        font-size: 2.3rem;
+        
+    } 
+    .main-heading{
+        font-size: 3rem;
+    } 
+    .category,.level-head{
+        font-size: 2rem;
+    }
+    .limit-head{
+        font-size: 20px;
+    }
+    .actual-question{
+        font-size: 35px;
+    }
+    h3.options{
+        font-size: 15px;
+    }
+    
+
 }
