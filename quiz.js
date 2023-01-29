@@ -37,14 +37,14 @@ let limit=document.querySelector('.limit').value
     }
 
     limit=parseInt(limit)
-    console.log(category,limit,level);
+   // console.log(category,limit,level);
     getQuestions(category,limit,level,quesNumber,numberOfCorrectAnswers,numberOfIncorrectAnswers)
     
  })
  function getQuestions(category,limit,level,quesNumber,numberOfCorrectAnswers,numberOfIncorrectAnswers){
 
     gettingData(category,limit,level).then((data)=>{
-        console.log('resolved successfully',data);
+      //  console.log('resolved successfully',data);
 showQuestions(data,quesNumber,count,limit,numberOfCorrectAnswers,numberOfIncorrectAnswers)
        }).catch((err)=>{
         console.log('rejected probably wrong JSON',err);
@@ -76,7 +76,7 @@ const gettingData=async (category,limit,level)=>{
 // displaying questions
 function showQuestions(data,quesNumber,count,limit,numberOfCorrectAnswers,numberOfIncorrectAnswers){
     if(quesNumber>limit-1){
-        console.log("khatam");
+       // console.log("khatam");
          ending(numberOfCorrectAnswers,numberOfIncorrectAnswers)
         return
        
@@ -85,16 +85,16 @@ function showQuestions(data,quesNumber,count,limit,numberOfCorrectAnswers,number
 
     let random=Math.floor(Math.random()*3)
     
-    console.log('thikai xa ta',data);
+  //  console.log('thikai xa ta',data);
     const question=data[quesNumber].question
     let correctAnswer=data[quesNumber].correctAnswer
-    console.log(correctAnswer);
+   // console.log(correctAnswer);
   
     const incorrectAnswers=data[quesNumber].incorrectAnswers
     incorrectAnswers.splice(random,0,correctAnswer)
     
-    console.log(incorrectAnswers);
-console.log(question);
+  //  console.log(incorrectAnswers);
+// console.log(question);
 
     const displayingQuestions=document.createElement('div')
     displayingQuestions.classList.add('question-answer')
@@ -111,7 +111,7 @@ console.log(question);
     </div>`
     quiz.append(displayingQuestions)
     let elementsAgain=document.querySelectorAll('.options')
-    console.log("k vako",elementsAgain);
+   // console.log("k vako",elementsAgain);
     
 elementsAgain.forEach((element)=>{
     if(element.innerText===correctAnswer){
@@ -129,7 +129,7 @@ elementsAgain.forEach((element)=>{
     answeredOptions.forEach(element=>{
         element.addEventListener('click',()=>{
           const index =answeredOptions.indexOf(element)
-          console.log(index);
+         // console.log(index);
           checkingMiddle(answeredOptions,index)
              
             })
@@ -175,7 +175,7 @@ elements2.forEach((element)=>{
 })
         
   
-    console.log("khoi ta next",numberOfCorrectAnswers,numberOfIncorrectAnswers);
+   // console.log("khoi ta next",numberOfCorrectAnswers,numberOfIncorrectAnswers);
   /*
                 quesNumber++
                 count++
@@ -203,7 +203,7 @@ else{
 }
 function ending(numberOfCorrectAnswers,numberOfIncorrectAnswers){
     let totalQuestions=numberOfCorrectAnswers+numberOfIncorrectAnswers
-    console.log("finally",numberOfCorrectAnswers,numberOfIncorrectAnswers);
+   // console.log("finally",numberOfCorrectAnswers,numberOfIncorrectAnswers);
     const endMessage=document.createElement('div')
     endMessage.innerHTML=`<h1 class="main-heading">Congratulations!! You completed the quiz</h1>
     <h3 class="level-head" >Total Questions Attempted: ${totalQuestions}</h3>
