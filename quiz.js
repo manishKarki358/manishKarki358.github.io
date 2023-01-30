@@ -3,7 +3,7 @@
 let filters=document.querySelector('.filters')
 const start=document.querySelector('.start')
 let quiz=document.querySelector('.quiz')
-
+const loader=document.querySelector('.loader')
  
 
  let count=1
@@ -24,6 +24,7 @@ let level=levelsOptions.value
 let limit=document.querySelector('.limit').value
 
     filters.style.display="none"
+    loader.style.display="block"
 
     var styles = {
         "display": "flex",
@@ -110,6 +111,7 @@ function showQuestions(data,quesNumber,count,limit,numberOfCorrectAnswers,number
     <button class="next">Next</button>
     </div>`
     quiz.append(displayingQuestions)
+    loader.style.display="none"
     let elementsAgain=document.querySelectorAll('.options')
    // console.log("k vako",elementsAgain);
     
