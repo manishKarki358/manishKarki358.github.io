@@ -219,5 +219,6 @@ function ending(numberOfCorrectAnswers,numberOfIncorrectAnswers){
         endMessage.remove()
         
         filters.style.display="flex"
+        count=1
     })
 }
